@@ -268,9 +268,9 @@ Safety Decision
 
 \| Classifier | Logistic Regression |
 
-\| Production classifier | \`final_safety_classifier.pkl\` |
+\| Production classifier | \`final\_safety\_classifier.pkl\` |
 
-\| SAE model | \`sparse_autoencoder_full.pt\` |
+\| SAE model | \`sparse\_autoencoder\_full.pt\` |
 
 \| Production threshold | \`0.50\` |
 
@@ -278,7 +278,7 @@ Safety Decision
 
 **### Production decision currently implemented**
 
-The current production \`src/safety_model.py\` uses:
+The current production \`src/safety\_model.py\` uses:
 
 \`\`\`text
 
@@ -296,7 +296,7 @@ Harmful probability < 0.50
 
 \`\`\`
 
-\> **\*\*Important:\*\*** Earlier research documentation contains a three-level \`ALLOW / REVIEW / BLOCK\` policy with a review threshold of \`0.30\`. The current production \`safety_model.py\` does not implement the \`REVIEW\` branch. The README therefore documents the research policy separately from the actual production implementation.
+\> **\*\*Important:\*\*** Earlier research documentation contains a three-level \`ALLOW / REVIEW / BLOCK\` policy with a review threshold of \`0.30\`. The current production \`safety\_model.py\` does not implement the \`REVIEW\` branch. The README therefore documents the research policy separately from the actual production implementation.
 
 **---**
 
@@ -314,7 +314,7 @@ with a project-trained LoRA adapter:
 
 \`\`\`text
 
-llama_safety_adapter_v2
+llama\_safety\_adapter\_v2
 
 \`\`\`
 
@@ -328,7 +328,7 @@ The adapter was trained using QLoRA with:
 
 \- LoRA dropout: 0.05
 
-\- Target modules: \`q_proj\`, \`v_proj\`
+\- Target modules: \`q\_proj\`, \`v\_proj\`
 
 \- Batch size: 1
 
@@ -706,7 +706,7 @@ For another machine, reproduce the environment and provide the required model fi
 
 \`\`\`bash
 
-git clone https\://github.com/AsadShaikh/neural-feature-safety.git
+git clone https\://github.com/programmingwithasad/neural-feature-safety.git
 
 cd neural-feature-safety
 
@@ -758,7 +758,7 @@ Verify PyTorch and CUDA:
 
 \`\`\`bash
 
-python -c "import torch; print('PyTorch:', torch.\_\_version\_\_); print('CUDA available:', torch.cuda.is_available()); print('GPU:', torch.cuda.get_device_name(0) if torch.cuda.is_available() else 'CPU')"
+python -c "import torch; print('PyTorch:', torch.\_\_version\_\_); print('CUDA available:', torch.cuda.is\_available()); print('GPU:', torch.cuda.get\_device\_name(0) if torch.cuda.is\_available() else 'CPU')"
 
 \`\`\`
 
@@ -772,9 +772,9 @@ The project requires:
 
 \`\`\`text
 
-models/sparse_autoencoder_full.pt
+models/sparse\_autoencoder\_full.pt
 
-models/final_safety_classifier.pkl
+models/final\_safety\_classifier.pkl
 
 \`\`\`
 
@@ -808,7 +808,7 @@ Hugging Face:
 
 \`\`\`text
 
-https\://huggingface.co/AsadShaikh/llama-safety-adapter-v2
+https\://huggingface.co/programmingwithasad/llama-safety-adapter-v2
 
 \`\`\`
 
@@ -816,7 +816,7 @@ The current working Llama client expects the adapter at:
 
 \`\`\`text
 
-models/llm/llama_safety_adapter_v2
+models/llm/llama\_safety\_adapter\_v2
 
 \`\`\`
 
@@ -832,7 +832,7 @@ From the project root:
 
 \`\`\`powershell
 
-python -c "from app.main import app; print('FASTAPI_IMPORT_OK')"
+python -c "from app.main import app; print('FASTAPI\_IMPORT\_OK')"
 
 \`\`\`
 
@@ -840,7 +840,7 @@ Then:
 
 \`\`\`powershell
 
-python -c "from app.llm.llama_client import LlamaClient; print('LLAMA_CLIENT_IMPORT_OK')"
+python -c "from app.llm.llama\_client import LlamaClient; print('LLAMA\_CLIENT\_IMPORT\_OK')"
 
 \`\`\`
 
@@ -848,7 +848,7 @@ Then:
 
 \`\`\`powershell
 
-python -c "from app.gateway.safety_gateway import SafetyGateway; print('GATEWAY_IMPORT_OK')"
+python -c "from app.gateway.safety\_gateway import SafetyGateway; print('GATEWAY\_IMPORT\_OK')"
 
 \`\`\`
 
@@ -996,13 +996,13 @@ The response contains:
 
 response
 
-input_safety
+input\_safety
 
-output_safety
+output\_safety
 
 path
 
-recovery_attempts
+recovery\_attempts
 
 \`\`\`
 
@@ -1074,17 +1074,17 @@ neural-feature-safety/
 
 │   ├── gateway/
 
-│   │   └── safety_gateway.py
+│   │   └── safety\_gateway.py
 
 │   ├── llm/
 
-│   │   └── llama_client.py
+│   │   └── llama\_client.py
 
 │   └── safety/
 
-│       ├── input_guard.py
+│       ├── input\_guard.py
 
-│       └── output_guard.py
+│       └── output\_guard.py
 
 │
 
@@ -1126,13 +1126,13 @@ neural-feature-safety/
 
 ├── models/
 
-│   ├── sparse_autoencoder_full.pt
+│   ├── sparse\_autoencoder\_full.pt
 
-│   ├── final_safety_classifier.pkl
+│   ├── final\_safety\_classifier.pkl
 
 │   └── llm/
 
-│       └── llama_safety_adapter_v2/
+│       └── llama\_safety\_adapter\_v2/
 
 │
 
@@ -1140,11 +1140,11 @@ neural-feature-safety/
 
 │   ├── autoencoder.py
 
-│   ├── safety_controller.py
+│   ├── safety\_controller.py
 
-│   ├── safety_model.py
+│   ├── safety\_model.py
 
-│   ├── safety_pipeline.py
+│   ├── safety\_pipeline.py
 
 │   └── ...
 
@@ -1344,12 +1344,12 @@ The system is designed as a research and demonstration platform for studying:
 
 Built as an experimental system for studying **\*\*neural representations, sparse features, interpretability, and AI safety control\*\***.
 
-**\*\*Author:\*\*** AsadShaikh
+**\*\*Author:\*\*** Asad Shaikh
 
 **\*\*GitHub:\*\***  
 
-https\://github.com/AsadShaikh/neural-feature-safety
+https\://github.com/programmingwithasad/neural-feature-safety
 
 **\*\*Hugging Face Adapter:\*\***  
 
-https\://huggingface.co/AsadShaikh/llama-safety-adapter-v2
+https\://huggingface.co/programmingwithasad/llama-safety-adapter-v2
