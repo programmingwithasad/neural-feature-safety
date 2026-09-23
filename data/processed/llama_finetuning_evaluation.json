@@ -1,0 +1,42 @@
+{
+  "model": "Llama-3.2-3B-Instruct",
+  "adapter": "C:\\Users\\Naish Sayed\\Desktop\\neural-feature-safety\\models\\llm\\llama_safety_adapter",
+  "test_file": "C:\\Users\\Naish Sayed\\Desktop\\neural-feature-safety\\data\\llm_finetuning\\test.jsonl",
+  "test_examples": 4,
+  "average_generation_time_seconds": 8.37,
+  "peak_gpu_memory_gb": 2.1436,
+  "results": [
+    {
+      "index": 1,
+      "category": "project",
+      "prompt": "What is a safety classifier?",
+      "expected_response": "A safety classifier is a model that analyzes an input or output and assigns a safety-related classification. In an AI gateway, its result can be used by a separate controller to allow, review, or block content.",
+      "generated_response": "A safety classifier is a system or tool used to categorize and evaluate the level of risk or hazard associated with a particular activity, process, or product. The primary purpose of a safety classifier is to identify and prioritize potential hazards, allowing for more effective risk management and mitigation strategies.\n\nSafety classifiers typically use a standardized framework or set of criteria to assess the level of risk or hazard, such as:\n\n1. Hazard severity: The potential impact or harm caused by the hazard.\n2. Hazard frequency: The likelihood or probability of the hazard occurring.\n3. Hazard exposure: The level of exposure to the hazard, such as the number of people or equipment involved.\n\nBy classifying hazards, organizations can:\n\n1. Identify high-risk areas or activities that require more",
+      "generation_time_seconds": 8.9208
+    },
+    {
+      "index": 2,
+      "category": "project",
+      "prompt": "What is an AI safety gateway?",
+      "expected_response": "An AI safety gateway is an intermediary layer between an application and an AI model. It can inspect user inputs before generation, inspect generated outputs afterward, apply safety policies, and return either the generated response or a safe fallback.",
+      "generated_response": "An AI safety gateway is a software component that acts as a middleman between an AI system and its environment, with the primary goal of ensuring the AI system operates safely and responsibly. The gateway is designed to detect and prevent potential safety risks, such as:\n\n1. Unintended consequences: The AI system may produce unintended consequences, such as harm to people or the environment, that could have severe consequences if left unchecked.\n2. Adversarial attacks: The AI system may be vulnerable to adversarial attacks, which are designed to manipulate or deceive the AI system into producing incorrect or malicious results.\n3. Data poisoning: The AI system may be vulnerable to data poisoning, which is the act of intentionally corrupting or manipulating the data used to train the",
+      "generation_time_seconds": 8.1975
+    },
+    {
+      "index": 3,
+      "category": "general",
+      "prompt": "Explain machine learning in simple terms.",
+      "expected_response": "Machine learning is a method of building computer systems that learn patterns from examples instead of being explicitly programmed for every situation. The system uses those learned patterns to make predictions or decisions on new data.",
+      "generated_response": "Machine learning is a way for computers to learn and improve on their own, without being explicitly programmed. Here's a simple explanation:\n\n**Imagine you're trying to teach a child to recognize pictures of cats and dogs.**\n\nYou show the child many pictures of cats and dogs, and say \"this is a cat\" or \"this is a dog.\" At first, the child might not be very good at recognizing the difference.\n\n**But then, you keep showing them more pictures, and they start to notice patterns.**\n\nThey might say \"oh, I see that cats have pointy ears and dogs have floppy ears.\" And then, when you show them a new picture, they can use that knowledge to say \"this is a cat\" or \"",
+      "generation_time_seconds": 8.1616
+    },
+    {
+      "index": 4,
+      "category": "technical",
+      "prompt": "What is a database?",
+      "expected_response": "A database is an organized system for storing and retrieving information. Database systems provide mechanisms for creating, updating, querying, and managing data efficiently.",
+      "generated_response": "A database is a collection of organized data that is stored in a way that allows for efficient retrieval and manipulation. It is a repository of data that is designed to be easily accessed, modified, and managed by a computer system.\n\nA database typically consists of several key components:\n\n1. **Data**: The actual information stored in the database, such as names, addresses, phone numbers, and other types of data.\n2. **Schema**: The structure of the database, including the relationships between different data elements and the rules for how the data is organized.\n3. **Storage**: The physical location where the data is stored, such as a hard drive or a cloud-based storage service.\n4. **Querying**: The process of retrieving specific data from the",
+      "generation_time_seconds": 8.2002
+    }
+  ]
+}

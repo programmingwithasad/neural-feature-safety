@@ -1,0 +1,16 @@
+# Deep Learning
+torch
+transformers
+
+# Data Processing
+numpy
+pandas
+pyarrow
+
+# Machine Learning
+scikit-learn
+scipy
+joblib
+
+# Utilities
+tqdm
